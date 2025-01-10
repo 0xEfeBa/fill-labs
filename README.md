@@ -79,12 +79,12 @@ The backend uses the [gorilla/mux](https://github.com/gorilla/mux) library to de
 Example routing code:
 
 
-router := mux.NewRouter()
-router.HandleFunc("/users", userHandler.GetAllUsers).Methods("GET")
-router.HandleFunc("/users/{id}", userHandler.GetUserByID).Methods("GET")
-router.HandleFunc("/users", userHandler.CreateUser).Methods("POST")
-router.HandleFunc("/users/{id}", userHandler.UpdateUser).Methods("PUT")
-router.HandleFunc("/users/{id}", userHandler.DeleteUser).Methods("DELETE")
+- router := mux.NewRouter()
+ router.HandleFunc("/users", userHandler.GetAllUsers).Methods("GET")
+ router.HandleFunc("/users/{id}", userHandler.GetUserByID).Methods("GET")
+ router.HandleFunc("/users", userHandler.CreateUser).Methods("POST")
+ router.HandleFunc("/users/{id}", userHandler.UpdateUser).Methods("PUT")
+ router.HandleFunc("/users/{id}", userHandler.DeleteUser).Methods("DELETE")
 
 
 Running the Frontend:
