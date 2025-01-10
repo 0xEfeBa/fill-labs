@@ -92,14 +92,14 @@ Go to the sw-q4/frontend folder. Run the npm install command to install Node.js 
 Then, use the npm run dev command to start the frontend application. 
 The frontend interface will run at http://localhost:3000.
 
-cd sw-q4/frontend
-npm install react react-dom next
-npm install axios
-npm install typescript @types/react @types/node
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init
+- cd sw-q4/frontend
+- npm install react react-dom next
+- npm install axios
+- npm install typescript @types/react @types/node
+- npm install -D tailwindcss postcss autoprefixer
+- npx tailwindcss init
 
-npm run dev
+- npm run dev
 
 
 
