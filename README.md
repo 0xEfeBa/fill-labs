@@ -58,11 +58,34 @@ Q4:
 Running the Backend:
 Go to the sw-q4 folder. Run the go mod tidy command to install Go dependencies. 
 Then, use the go run main.go command to start the backend application. 
-The backend application will run at http://localhost:8080.
+The backend application will run at http://localhost:8080/users.
+
 
 cd sw-q4
 go mod tidy
 go run main.go
+
+## Routing and CORS Configuration
+
+### Routing
+The backend uses the [gorilla/mux](https://github.com/gorilla/mux) library to define the following API endpoints:
+
+- **List all users**: GET /users
+- **Retrieve a specific user by ID**: GET /users/{id}
+- **Create a new user**: POST /users
+- **Update an existing user**: PUT /users/{id}
+- **Delete a user**: DELETE /users/{id}
+
+Example routing code:
+
+
+router := mux.NewRouter()
+router.HandleFunc("/users", userHandler.GetAllUsers).Methods("GET")
+router.HandleFunc("/users/{id}", userHandler.GetUserByID).Methods("GET")
+router.HandleFunc("/users", userHandler.CreateUser).Methods("POST")
+router.HandleFunc("/users/{id}", userHandler.UpdateUser).Methods("PUT")
+router.HandleFunc("/users/{id}", userHandler.DeleteUser).Methods("DELETE")
+
 
 Running the Frontend:
 Go to the sw-q4/frontend folder. Run the npm install command to install Node.js dependencies. 
