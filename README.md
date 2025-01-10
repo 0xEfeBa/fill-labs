@@ -93,8 +93,14 @@ Then, use the npm run dev command to start the frontend application.
 The frontend interface will run at http://localhost:3000.
 
 cd sw-q4/frontend
-npm install
+npm install react react-dom next
+npm install axios
+npm install typescript @types/react @types/node
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+
 npm run dev
+
 
 
 The project is available at: https://github.com/0xEfeBa/fill-labs
